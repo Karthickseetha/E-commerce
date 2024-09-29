@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buymi</title>
+    <link rel="icon" href="./images/logo.webp" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            <p>Free Delivery on orders above ₹100</p>
+            <button id="theme-toggle" class="btn"><i class="fas fa-adjust"></i></button>
+        </div>
+        <nav class="navbar">
+            <div>
+                <a href="#hero" class="logo">Buymi</a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#products" data-category="all">Products</a></li>
+                <li><a href="#products" data-category="beauty">Beauty</a></li>
+                <li><a href="#products" data-category="furniture">Furniture</a></li>
+                <li><a href="#products" data-category="groceries">Grocery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="login-btn"><i class="fas fa-sign-in"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+<main class="welcome-section">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Buymi Ecommerce</h1>
+            <p>Explore the latest in ecommerce essentials</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="./images/image.webp" alt="Hero Image">
+        </div>
+    </section>
+
+
+
+    
+    <!-- Product Section -->
+    <section id="products" class="product-section">
+        <h2>Our Products</h2>
+        <div id="product-container" class="product-container">
+            <!-- Products will be fetched and displayed here via JS -->
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+          <h2>About Us</h2>
+          <p>
+            Welcome to <strong>Buymi</strong>, your go-to destination for the latest and trendiest products in fashion, electronics, gifts, and more. We are committed to offering a seamless shopping experience with a focus on quality, affordability, and customer satisfaction. Our carefully curated collections are designed to meet the needs of modern consumers, ensuring that there’s something for everyone.
+          </p>
+          <p>
+            Established in 2024, <strong>Buymi</strong> has grown from a small startup to a leading ecommerce platform, catering to shoppers worldwide. Our mission is to create a marketplace where innovation meets style, helping customers find products that inspire and improve their lives. We pride ourselves on our customer-centric approach, offering top-notch customer service and a hassle-free shopping experience.
+          </p>
+          <p>
+            At <strong>Buymi</strong>, we believe in staying ahead of the curve, leveraging technology and trends to offer the best online shopping experience possible. Whether you're looking for fashion-forward clothing, cutting-edge gadgets, or unique gift ideas, Buymi has you covered. Thank you for choosing Buymi, where your satisfaction is our priority!
+          </p>
+          <p><strong>Join us on this journey and explore what Buymi has to offer!</strong></p>
+        </div>
+      </section>
+      
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We’d love to hear from you! Whether you have a question, need assistance, or want to provide feedback, our team is here to help. Reach out to us using the information below or fill out our contact form, and we’ll get back to you as soon as possible.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <h3>Customer Support</h3>
+                <p>Email: <a href="mailto:support@buymi.com">support@buymi.com</a></p>
+                <p>Phone: +1 (800) 123-4567</p>
+                <p>Hours: Mon-Fri, 9 AM - 6 PM (EST)</p>
+              </div>
+              
+              <div class="contact-item">
+                <h3>Business Inquiries</h3>
+                <p>Email: <a href="mailto:business@buymi.com">business@buymi.com</a></p>
+                <p>For partnership opportunities, wholesale inquiries, or media collaborations, feel free to reach out to our business development team.</p>
+              </div>
+              
+              <div class="contact-item">
+                <h3>Follow Us</h3>
+                <p>Stay connected with us through our social media channels:</p>
+                <ul class="social-media">
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                </ul>
+              </div>
+            </div>
+                </div>
+    </section>
+</main>
+
+
+<div class="form-container hidden">
+    <div class="form login-form active-form">
+
+      <form>
+        <h3>Login to your account</h3>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+
+      <p class="toggle-form">Don't have an account? <a href="#" id="show-signup">Sign up here</a></p>
+      <button class="back-btn">Back</button>
+    </div>
+
+    <div class="form signup-form">
+      <h3>Create your account</h3>
+      <form>
+        <label for="signup-email">Email:</label>
+        <input type="email" id="signup-email" placeholder="Enter your email" required>
+
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" placeholder="Create a password" required>
+
+        <button type="submit" class="submit-btn">Sign Up</button>
+      </form>
+
+      <p class="toggle-form">Already have an account? <a href="#" id="show-login">Login here</a></p>
+      <button class="back-btn">Back</button>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Cart Page Section -->
+ <section id="cart-page" style="display:none;">
+    <h2>Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total Amount: $<span id="total-amount">0.00</span></p>
+    <button id="buy-btn">Proceed to Checkout</button>
+    <button id="clear-cart-btn">Clear Cart</button>
+    <button id="back-to-shopping-btn">Back to Shopping</button>
+  </section>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Buymi</h2>
+            </div>
+            <div class="footer-links">
+                <ul class="menu">
+                    <li><a href="#products" data-category="all">Products</a></li>
+                    <li><a href="#products" data-category="beauty">Beauty</a></li>
+                    <li><a href="#products" data-category="furniture">Furniture</a></li>
+                    <li><a href="#products" data-category="groceries">Grocery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Subscribe to our newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="submit">Subscribe</button>
+                </form>
+            </div>
+            <p>&copy; 2024 Buymi. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const productContainer = document.getElementById('product-container');
+            const menuLinks = document.querySelectorAll('.menu a[data-category]');
+            
+            // Fetch products from DummyJSON API
+            let allProducts = [];
+
+            fetch('https://dummyjson.com/products')
+                .then(response => response.json())
+                .then(data => {
+                    allProducts = data.products; // Store all products
+                    displayProducts(allProducts); // Initially display all products
+                });
+
+            // Display products based on category
+            function displayProducts(products) {
+                productContainer.innerHTML = ''; // Clear current products
+                products.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.classList.add('product-card');
+
+                    productCard.innerHTML = `
+                        <img src="${product.thumbnail}" alt="${product.title}">
+                        <h3>${product.title}</h3>
+                        <p>₹${product.price}</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    `;
+
+                    productContainer.appendChild(productCard);
+                });
+            }
+ 
+            // Filter products based on menu selection
+            menuLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default behavior
+
+                    const category = e.target.getAttribute('data-category');
+                    if (category === 'all') {
+                        displayProducts(allProducts); // Show all products
+                    } else {
+                        const filteredProducts = allProducts.filter(product => product.category === category);
+                        displayProducts(filteredProducts); // Show filtered products
+                    }
+
+                    // Smooth scroll to the product section
+                    document.querySelector('#products').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        });
+
+
+                    // JavaScript Code
+            const loginForm = document.querySelector('.login-form');
+            const signupForm = document.querySelector('.signup-form');
+            const showSignupLink = document.getElementById('show-signup');
+            const showLoginLink = document.getElementById('show-login');
+            const loginBtn = document.getElementById('login-btn');
+            const formContainer = document.querySelector('.form-container');
+            const backBtns = document.querySelectorAll('.back-btn');
+            const welcomeSection = document.querySelector('.welcome-section');
+
+            // Show the login form and hide the main content
+            loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            formContainer.classList.remove('hidden');
+            welcomeSection.classList.add('hidden');
+            });
+
+            // Show signup form
+            showSignupLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.classList.remove('active-form');
+            signupForm.classList.add('active-form');
+            });
+
+            // Show login form
+            showLoginLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.classList.remove('active-form');
+            loginForm.classList.add('active-form');
+            });
+
+            // Hide form and show main content on back button click
+            backBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                formContainer.classList.add('hidden');
+                welcomeSection.classList.remove('hidden');
+            });
+            });
+
+
+
+
+
+
+    </script>
+</body>
+</html>
